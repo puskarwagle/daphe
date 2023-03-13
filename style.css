@@ -1,0 +1,42 @@
+* {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+body {
+    background-image: url('./danphe.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+#container {
+    display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      width:100vw;
+}
+#css {
+    height:500px;
+    width:300px;
+    border:5px solid red;
+}
+#colours {
+ height: 500px;
+ width:300px;
+ border:5px solid red;
+ padding:0.5rem;
+}
+#js{
+    border: 2px solid green;
+    width:100vw;
+    min-height:20vh;
+    background-color:white;
+    padding:0.5rem;
+    display:flex;
+    flex-direction:column;
+}
+
+@media (max-width: 600px) {
+      #css {
+          width:100vw;
+      }
+    }

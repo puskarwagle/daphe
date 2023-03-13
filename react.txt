@@ -1,0 +1,34 @@
+import React, { useState } from "react";
+
+const colors = ["red", "green", "blue", "black", "orange"];
+
+function App() {
+  const [previousColor, setPreviousColor] = useState(null);
+  const [currentColor, setCurrentColor] = useState(null);
+
+  function handleChangeColor() {
+    let newColor;
+
+    if (previousColor === "blue") {
+      newColor = "green";
+    } else {
+      newColor = colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    setCurrentColor(newColor);
+    setPreviousColor(newColor);
+  }
+
+  return (
+    <div>
+      <button
+        style={{ fontSize: "1rem", backgroundColor: currentColor }}
+        onClick={handleChangeColor}
+      >
+        {currentColor ? currentColor : "change colors on click"}
+      </button>
+    </div>
+  );
+}
+
+export default App;
